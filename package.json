@@ -1,0 +1,22 @@
+{
+  "name": "leetcode-class",
+  "version": "1.0.0",
+  "description": "主要是JavaScript在LeetCode上面的 ListNode 与 TreeNode, 方便各位调试",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LoveofRedMoon/LeetCode-Class.git"
+  },
+  "author": "Chenyj",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LoveofRedMoon/LeetCode-Class/issues"
+  },
+  "homepage": "https://github.com/LoveofRedMoon/LeetCode-Class#readme"
+}
