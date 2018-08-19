@@ -140,7 +140,7 @@ class TreeNode {
 ;(function() {
   const root = this
   if (typeof window !== 'undefined' && root === window) {
-    isBrowserSide = true
+    const isBrowserSide = true
   } else {
     module.exports = { ListNode, TreeNode }
   }
