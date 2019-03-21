@@ -13,7 +13,8 @@ class ListNode {
     if (!Array.isArray(arr)) return null
     const res = new ListNode(null)
     let temp = res
-    for (let i = 0, len = arr.length; i < len; i++) temp = temp.next = new ListNode(arr[i])
+    for (let i = 0, len = arr.length; i < len; i++)
+      temp = temp.next = new ListNode(arr[i])
     return res.next
   }
   /**
@@ -78,6 +79,30 @@ class Interval {
   }
 }
 
+class Employee {
+  /**
+   *Creates an instance of Employee.
+   * @param {Number} id
+   * @param {Number} importance
+   * @param {Number[]} subordinates
+   * @memberof Employee
+   */
+  constructor(id, importance, subordinates) {
+    this.id = id
+    this.importance = importance
+    this.subordinates = subordinates
+  }
+  /**
+   * @static
+   * @param {[Number, Number, Number[]][]} arr
+   * @returns {Employee[]}
+   * @memberof Employee
+   */
+  static createArr(arr) {
+    return arr.map(v => new Employee(v))
+  }
+}
+
 class TreeNode {
   constructor(val) {
     this.val = val
@@ -97,7 +122,8 @@ class TreeNode {
       const cur = temp.shift()
       if (!cur) break
       if (arr[i] !== null) temp.push((cur.left = new TreeNode(arr[i])))
-      if (i + 1 < len && arr[i + 1] !== null) temp.push((cur.right = new TreeNode(arr[i + 1])))
+      if (i + 1 < len && arr[i + 1] !== null)
+        temp.push((cur.right = new TreeNode(arr[i + 1])))
     }
     return res
   }
@@ -140,9 +166,18 @@ class TreeNode {
       console.log('---- 折行显示会错位 ----')
       const res = [[this.val]]
       let temp = [this.left, this.right]
-      while (temp.some(v => v !== null) && temp.reduce((p, v) => p + (v === null ? 1 : v.toString().length + 1)) < maxCharNum) {
+      while (
+        temp.some(v => v !== null) &&
+        temp.reduce((p, v) => p + (v === null ? 1 : v.toString().length + 1)) <
+          maxCharNum
+      ) {
         res.push(temp)
-        temp = temp.reduce((p, v) => (v === null ? p.push(null, null) : p.push(v.left, v.right), p), [])
+        temp = temp.reduce(
+          (p, v) => (
+            v === null ? p.push(null, null) : p.push(v.left, v.right), p
+          ),
+          []
+        )
       }
       // 处理各层字符串的位置
     } else {

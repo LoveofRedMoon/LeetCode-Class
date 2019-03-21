@@ -26,6 +26,14 @@
 
 将链表数组转化为数组进行输出: `Interval.showList() : Array[]`
 
+## Employee
+
+区间结构
+
+构造函数: `Employee`
+
+将 LeetCode 的 Employee 样例转换为 Employee 数组(遵循 LeetCode 题目规范): `Employee.createArr(arr: [number, number, number[]][]) : Employee[]`
+
 ## TreeNode
 
 二叉树形结构

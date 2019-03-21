@@ -15,6 +15,13 @@ declare module 'leetcode-class' {
     start: any
     end: any
   }
+  export class Employee {
+    constructor(id: number, importance: number, subordinates: number[])
+    static createArr(arr: [number, number, number[]][])
+    id: number
+    importance: number
+    subordinates: number[]
+  }
   export class TreeNode {
     static create(arr: Array<any>): TreeNode
     static show(root: TreeNode | null): Array<any>
