@@ -2,8 +2,14 @@ declare module 'leetcode-class' {
   export class ListNode {
     static create(arr: Array<any>): ListNode
     static show(root: ListNode | null): Array<any>
+    static createIntersectList(
+      firstArr: Array<any>,
+      secondArr: Array<any>,
+      IntersectArr: Array<any>
+    ): [ListNode, ListNode] | null
     constructor(val: any)
     visualShow(): void
+    getLast(): ListNode
     next: TreeNode | null
     val: any
   }

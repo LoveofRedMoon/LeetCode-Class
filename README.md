@@ -10,7 +10,11 @@
 
 通过数组创建链表(遵循 LeetCode 题目规范): `ListNode.create(arr : Array) : ListNode`
 
+通过数组创建交叉链表(遵循 LeetCode 题目规范, 如 160 题): `ListNode.createIntersectList(firstArr: Array<any>,secondArr: Array<any>IntersectArr: Array<any>) : [ListNode, ListNode]`, 参数依次为: 首个链表未交叉部分, 下个链表未交叉部分, 交叉部分
+
 将链表转化为数组进行输出: `ListNode.prototype.show() : Array`
+
+获取链表最后一个`ListNode`: `ListNode.prototype.getLast() : ListNode`
 
 拓展(还未开工): 随机构建一个长度为 m 的链表: `ListNode.mock(m : Number) : ListNode`
 
