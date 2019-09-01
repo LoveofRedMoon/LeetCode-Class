@@ -147,3 +147,20 @@ head.visualShow()
 //             ↘→ 6
 //   ↘→ 3
 ```
+
+## RunScript(对应实现类)(testing)
+
+> 例如`1172`题, 餐盘栈. 欢迎提`issue`
+
+### 运行
+将输入参数按照一定顺序执行
+`function runScript(ommonds: String[], inputs: any[][], classes?: any[]): any[]`
+```js
+// 从左到右的参数为
+// commonds 执行的命令列表
+// inputs 所对应执行的参数
+// classes 对应执行类数组(毕竟跨作用域了)
+runScript(["DinnerPlates","push","push","push","push","push","popAtStack","push","push","popAtStack","popAtStack","pop","pop","pop","pop","pop"], [[2],[1],[2],[3],[4],[5],[0],[20],[21],[0],[2],[],[],[],[],[]], [DinnerPlates])
+
+// 详见example示例
+```
