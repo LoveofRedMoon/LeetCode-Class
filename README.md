@@ -1,87 +1,103 @@
 # LeetCode-Class
 
-主要是 JavaScript 在 LeetCode 上面的 `ListNode`, `TreeNode`, `Interval`, `Employee`, 方便各位调试
+This project is convenient for you to debug `LeetCode`
 
-## ListNode(链表)
+includes `ListNode`, `TreeNode`, `Interval`, `Employee`
 
-### 构造函数
+## ListNode
 
-```js
-const node = new ListNode(val);
-```
-
-### 数组初始化
-
-通过数组创建链表(遵循 LeetCode 题目规范): `ListNode.create(arr : Array) : ListNode`
+### Constructor
 
 ```js
-const head = ListNode.create([1,2,3,4,5]);
+const node = new ListNode(val)
 ```
 
-### 可视化展示
+### Initialize using an array
+
+(Follow LeetCode topic specifications): `ListNode.create(arr : Array) : ListNode`
+
+```js
+const head = ListNode.create([1, 2, 3, 4, 5])
+```
+
+### Visual display
+
 `ListNode.prototype.visualShow() : void`
+
 ```js
-const head = ListNode.create([1,2,3,4,5]);
+const head = ListNode.create([1, 2, 3, 4, 5])
 
 head.visualShow()
 //1 -> 2 -> 3 -> 4 -> 5
 ```
 
-### 交叉链表初始化
-通过数组创建交叉链表(遵循 LeetCode 题目规范, 如 160 题): `ListNode.createIntersectList(firstArr: Array<any>,secondArr: Array<any>IntersectArr: Array<any>) : [ListNode, ListNode]`, 参数依次为: 首个链表未交叉部分, 下个链表未交叉部分, 交叉部分
+### Initialize Cross linked List using arrays
+
+(Follow LeetCode topic specifications, Example Question 160): `ListNode.createIntersectList(firstArr: Array<any>,secondArr: Array<any>IntersectArr: Array<any>) : [ListNode, ListNode]`, parameters are: first ListArray Uncrossed, second ListArray Uncrossed, crossed
 
 ```js
-const [head1, head2] = ListNode.createIntersectList([1,2],[3,4],[5,6]);
+const [head1, head2] = ListNode.createIntersectList([1, 2], [3, 4], [5, 6])
 ```
 
-### 链表转数组
-将链表转化为数组进行输出: `ListNode.prototype.show() : Array`
+### Transform ListNodes to array
+
+`ListNode.prototype.show() : Array`
 
 ```js
-const head = ListNode.create([1,2,3]);
+const head = ListNode.create([1, 2, 3])
 
-head.show();
+head.show()
 // [1,2,3]
-ListNode.show(head);
+ListNode.show(head)
 // [1,2,3]
 ```
 
-### 获取链表末尾节点
-获取链表最后一个`ListNode`: `ListNode.prototype.getLast() : ListNode`
+### Get the last ListNode for a ListNode
+
+`ListNode.prototype.getLast() : ListNode`
 
 ```js
-const head = ListNode.create([1,2,3]);
+const head = ListNode.create([1, 2, 3])
 
-head.getLast().show();
+head.getLast().show()
 // [3]
 ```
 
+### Mock a ListNode with length n
 
-### 随机生成链表
-随机构建一个长度为 n 的链表: `ListNode.mock(n : Number) : ListNode`
+`ListNode.mock(n : Number) : ListNode`
 
 ```js
-const head = ListNode.mock(5);
+const head = ListNode.mock(5)
 ```
 
-## Interval(区间)
+## Interval
 
-### 构造函数
+### Constructor
+
 `Interval`
+
 ```js
-const interval = new Interval(1,3);
+const interval = new Interval(1, 3)
 ```
 
-### 数组初始化
-通过数组创建区间数组(遵循 LeetCode 题目规范): `Interval.createList(arr : Array[]) : Interval[]`
+### Initialize using an array
+
+(Follow LeetCode topic specifications): `Interval.createList(arr : Array[]) : Interval[]`
+
 ```js
-const intervals = Interval.createList([[1,2],[3,4]])
+const intervals = Interval.createList([
+  [1, 2],
+  [3, 4]
+])
 ```
 
-### 区间转数组
-将链表转化为数组进行输出: `Interval.show() : Array`
+### Transform Interval to array
+
+`Interval.show() : Array`
+
 ```js
-const interval = new Interval(1,3);
+const interval = new Interval(1, 3)
 
 interval.show()
 // [1,3]
@@ -89,45 +105,56 @@ Interval.show(interval)
 // [1,3]
 ```
 
-将链表数组转化为数组进行输出: `Interval.showList() : Array[]`
+Transform Intervals to arrays: `Interval.showList() : Array[]`
+
 ```js
-const intervals = Interval.createList([[1,2],[3,4]])
+const intervals = Interval.createList([
+  [1, 2],
+  [3, 4]
+])
 
 Interval.showList(intervals)
 // [[1,2],[3,4]]
 ```
 
-## Employee(雇佣人员)
+## Employee
 
-### 构造函数
+### Constructor
+
 `Employee`
+
 ```js
 const employee = new Employee(1)
 ```
 
-将 LeetCode 的 Employee 样例转换为 Employee 数组(遵循 LeetCode 题目规范): `Employee.createArr(arr: [number, number, number[]][]) : Employee[]`
+(Follow LeetCode topic specifications): `Employee.createArr(arr: [number, number, number[]][]) : Employee[]`
 
-## TreeNode(二叉树)
+## TreeNode
 
-### 构造函数
+### Constructor
+
 `TreeNode`
+
 ```js
 const node = new TreeNode(5)
 ```
 
-### 数组初始化
-通过数组创建二叉树(遵循 LeetCode 题目规范): `TreeNode.create(arr : Array) : TreeNode`
+### Initialize using an array
 
-> 注: LeetCode题目规范为单层从左至右排成数组, 不可缺少位置填`null`
+(Follow LeetCode topic specifications): `TreeNode.create(arr : Array) : TreeNode`
+
+> P.S. LeetCode title specification is From top to bottom, from left to right, indispensable position fill with`null`
 
 ```js
-const head = TreeNode.create([1,2,3,null,4,null,null,5,6]);
+const head = TreeNode.create([1, 2, 3, null, 4, null, null, 5, 6])
 ```
 
-### 二叉树转数组
-将二叉树转化为数组进行输出: `TreeNode.prototype.show() : Array`
+### Transfrom TreeNode to array
+
+`TreeNode.prototype.show() : Array`
+
 ```js
-const head = TreeNode.create([1,2,3,null,4,null,null,5,6]);
+const head = TreeNode.create([1, 2, 3, null, 4, null, null, 5, 6])
 
 head.show()
 // [1,2,3,null,4,null,null,5,6]
@@ -135,32 +162,60 @@ TreeNode.show(head)
 // [1,2,3,null,4,null,null,5,6]
 ```
 
-### 可视化展示
-将二叉树转化为数组进行输出: `TreeNode.prototype.visualShow() : void`
+### Visual display
+
+`TreeNode.prototype.visualShow() : void`
+
 ```js
-const head = TreeNode.create([1,2,3,null,4,null,null,5,6]);
+const head = TreeNode.create([1, 2, 3, null, 4, null, null, 5, 6])
 
 head.visualShow()
-// ---- 上为左, 下为右 ----
 // 1 -> 2
 //        ↘→ 4 -> 5
 //             ↘→ 6
 //   ↘→ 3
 ```
 
-## RunScript(对应实现类)(testing)
+## RunScript(For Constructor)
 
-> 例如`1172`题, 餐盘栈. 欢迎提`issue`
+> For Question `1172`, Dinner Plate Stacks. `issue` is need For this is Test
 
-### 运行
-将输入参数按照一定顺序执行
+### Run
+
+Execute input parameters in a certain order
 `function runScript(ommonds: String[], inputs: any[][], classes?: any[]): any[]`
-```js
-// 从左到右的参数为
-// commonds 执行的命令列表
-// inputs 所对应执行的参数
-// classes 对应执行类数组(毕竟跨作用域了)
-runScript(["DinnerPlates","push","push","push","push","push","popAtStack","push","push","popAtStack","popAtStack","pop","pop","pop","pop","pop"], [[2],[1],[2],[3],[4],[5],[0],[20],[21],[0],[2],[],[],[],[],[]], [DinnerPlates])
 
-// 详见example示例
+```js
+// The parameters from left to right are
+// commonds : List of executed commands
+// inputs : Corresponding execution parameters
+// classes : Corresponding execution class array
+runScript(
+  [
+    'DinnerPlates',
+    'push',
+    'push',
+    'push',
+    'push',
+    'push',
+    'popAtStack',
+    'push',
+    'push',
+    'popAtStack',
+    'popAtStack',
+    'pop',
+    'pop',
+    'pop',
+    'pop',
+    'pop'
+  ],
+  [[2], [1], [2], [3], [4], [5], [0], [20], [21], [0], [2], [], [], [], [], []],
+  [DinnerPlates]
+)
+
+// see example
 ```
+
+### results compare
+
+please use nodejs `assert` to confirm the result is right.
