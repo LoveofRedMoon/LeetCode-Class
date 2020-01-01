@@ -1,45 +1,45 @@
 declare module 'leetcode-class' {
-    export class ListNode {
-        static create(arr: Array<any>): ListNode
-        static show(root: ListNode | null): Array<any>
-        static createIntersectList(
-            firstArr: Array<any>,
-            secondArr: Array<any>,
-            IntersectArr: Array<any>
-        ): [ListNode, ListNode] | null
-        constructor(val: any)
-        visualShow(): void
-        getLast(): ListNode
-        next: TreeNode | null
-        val: any
-    }
-    export class Interval {
-        static createList(arr: Array[]): Interval[]
-        static show(root: Interval | null): Array | null
-        static showList(root: Interval[]): Array[]
-        constructor(start: any, end: any)
-        start: any
-        end: any
-    }
-    export class Employee {
-        constructor(id: number, importance: number, subordinates: number[])
-        static createArr(arr: [number, number, number[]][])
-        id: number
-        importance: number
-        subordinates: number[]
-    }
-    export class TreeNode {
-        static create(arr: Array<any>): TreeNode
-        static show(root: TreeNode | null): Array<any>
-        constructor(val: any)
-        visualShow(): void
-        left: TreeNode | null
-        right: TreeNode | null
-        val: any
-    }
-    export function runScript(
-        commonds: String[],
-        inputs: any[][],
-        classes?: any[]
-    ): any[]
+  export class ListNode {
+    static create(arr: Array<any>): ListNode
+    static show(root: ListNode | null): Array<any>
+    static createIntersectList(
+      firstArr: Array<any>,
+      secondArr: Array<any>,
+      IntersectArr: Array<any>
+    ): [ListNode, ListNode] | null
+    constructor(val: any)
+    visualShow(): void
+    getLast(): ListNode
+    next: ListNode | null
+    val: any
+  }
+  export class Interval {
+    static createList(arr: Array[]): Interval[]
+    static show(root: Interval | null): Array | null
+    static showList(root: Interval[]): Array[]
+    constructor(start: any, end: any)
+    start: any
+    end: any
+  }
+  export class Employee {
+    constructor(id: number, importance: number, subordinates: number[])
+    static createArr(arr: [number, number, number[]][])
+    id: number
+    importance: number
+    subordinates: number[]
+  }
+  export class TreeNode {
+    static create(arr: Array<any>): TreeNode
+    static show(root: TreeNode | null): Array<any>
+    constructor(val: any)
+    visualShow(): void
+    left: TreeNode | null
+    right: TreeNode | null
+    val: any
+  }
+  export function runScript(
+    commonds: String[],
+    inputs: any[][],
+    classes?: any[]
+  ): any[]
 }
