@@ -148,13 +148,55 @@ head.visualShow()
 //   ↘→ 3
 ```
 
+## Heap(堆)
+
+### Constructor
+
+`Heap`
+
+```js
+const heap = new Heap([2,1,0,3,4],null,false)
+```
+
+第一个参数表示初始化元素数组
+第二个参数表示如何从元素中取出比较值, 默认为`null`, 即取出元素本身
+For example: 
+```js
+const heap = new Heap([{val: 2, name: 'b'},{val: 1, name: 'a'}], element => element.val, false)
+```
+第三个参数表示是否是最大堆, 默认是最小堆
+
+### 添加元素
+
+`Heap.prototype.add(element: T): number`
+
+```js
+heap.add(5)
+```
+
+### 取出最小/最大堆元素并删除
+
+`Heap.prototype.delete() : T`
+
+```js
+head.delete()
+```
+
+### 取出最小/最大堆元素
+
+`TreeNode.prototype.value[0]`
+
+```js
+head.value[0]
+```
+
 ## RunScript(对应实现类)(testing)
 
 > 例如`1172`题, 餐盘栈. 欢迎提`issue`
 
 ### 运行
 将输入参数按照一定顺序执行
-`function runScript(ommonds: String[], inputs: any[][], classes?: any[]): any[]`
+`function runScript(commonds: String[], inputs: any[][], classes?: any[]): any[]`
 ```js
 // 从左到右的参数为
 // commonds 执行的命令列表

@@ -176,6 +176,48 @@ head.visualShow()
 //   ↘→ 3
 ```
 
+## Heap
+
+### Constructor
+
+`Heap`
+
+```js
+const heap = new Heap([2,1,0,3,4],null,false)
+```
+
+The first argument is inital array
+The second argument is how to get number from the element, default is null(get the value)
+For example: 
+```js
+const heap = new Heap([{val: 2, name: 'b'},{val: 1, name: 'a'}], element => element.val, false)
+```
+The third parameter indicates whether it is the maximum heap, default is minimum heap
+
+### add element
+
+`Heap.prototype.add(element: T): number`
+
+```js
+heap.add(5)
+```
+
+### delete element
+
+`Heap.prototype.delete() : T`
+
+```js
+head.delete()
+```
+
+### get the minimum/maximum element
+
+`TreeNode.prototype.value[0]`
+
+```js
+head.value[0]
+```
+
 ## RunScript(For Constructor)
 
 > For Question `1172`, Dinner Plate Stacks. `issue` is need For this is Test
