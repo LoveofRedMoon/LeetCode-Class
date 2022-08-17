@@ -1,4 +1,4 @@
-declare module 'leetcode-class' {
+//declare module 'leetcode-class' {
   export class ListNode<T = any> {
     static create(arr: Array<T>): ListNode
     static show(root: ListNode | null): Array<T>
@@ -51,4 +51,4 @@ declare module 'leetcode-class' {
     inputs: any[][],
     classes?: any[]
   ): any[]
-}
+// }
