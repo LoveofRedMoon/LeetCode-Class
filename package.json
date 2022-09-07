@@ -3,6 +3,7 @@
   "version": "1.2.4",
   "description": "JavaScript Tools For LeetCode",
   "main": "index.js",
+  "types":"index.d.ts",
   "directories": {
     "example": "example"
   },
